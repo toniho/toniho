@@ -3,15 +3,15 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className="min-h-screen bg-white dark:bg-gray-900">
       <Head>
-        <title>Create Next App</title>
+        <title>Toni Ho: Frontend Engineer, PNW, Pinoy</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+      <main>
+        <h1 className="text-8xl text-center dark:text-white">
+          Heya!
         </h1>
 
         <p className={styles.description}>
