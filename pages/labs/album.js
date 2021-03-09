@@ -26,10 +26,9 @@ const loopPhotos = (photos, num) => {
 
     return final;
 }
-const photos = loopPhotos(photoSources, 51);
+const photos = loopPhotos(photoSources, 200);
 
 const AlbumPage = () => {
-
     return (
         <div className="album-page page">
             <h1>Album</h1>

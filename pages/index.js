@@ -1,59 +1,44 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import LinkedInIcon from '../components/icons/LinkedIn';
+import SendEmailIcon from '../components/icons/SendEmail';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 dark:text-gray-50">
+    <div className="min-h-screen bg-yellow-50 dark:bg-gray-900 dark:text-gray-50">
       <Head>
         <title>Toni Ho: Frontend Engineer, PNW, Pinoy</title>
         <link rel="icon" href="/favicon.ico" />
+        <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet" />
       </Head>
 
       <main>
-        <h1 className="text-8xl text-center dark:text-white">
-          Heya!
+        <h1 className="text-6xl lg:text-8xl text-center dark:text-white playful">
+          &lt;th&gt;
         </h1>
-
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <p className="text-l text-center">Heya! I'm Toni, javascript dev, dad, PNW resident, proud Cebuano and occasional glutton.</p>
+        <div className="grid grid-cols-3 gap-4">
+          <div>
+            <a href="https://www.linkedin.com/in/toniho/">
+                <LinkedInIcon />
+              </a>
+          </div>
+          <div>
+            <a href="mailto:hello@toniho.com">
+              <SendEmailIcon />
+            </a>
+          </div>
+          <div><SendEmailIcon /></div>
         </div>
       </main>
 
-      <footer className={styles.footer}>
+      <footer>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+          <img src="/vercel.svg" alt="Vercel Logo" />
         </a>
       </footer>
     </div>
