@@ -1,0 +1,37 @@
+.card {
+    background: #fafafa;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0,0.6);
+    font-size: 1rem;
+}
+.board {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background: brown;
+    column-gap: 1%;
+    padding: 10px;
+}
+.list {
+    border-radius: 10px;
+    background:burlywood;
+    padding: 10px;
+}
+.list > h2 {
+    color: #fff;
+    text-shadow: 2px 2px orangered;
+    margin: 0;
+    padding: 0;
+}
+@media screen and (min-width: 769px) {
+    .board {
+        grid-template-columns: repeat(3, 33%);
+    }
+}
+
+@media screen and (min-width: 940px) {
+    .board {
+        grid-template-columns: repeat(5, 20%);
+    }
+}

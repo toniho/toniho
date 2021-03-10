@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import { BoardProvider, boardState } from '../../stores/BoardContext';
+import Board from '../../components/board/Board';
 
 const BoardPage = () => {
     return (
@@ -7,7 +8,7 @@ const BoardPage = () => {
             <h1>Trello Board</h1>
             <div>
                 <BoardProvider value={boardState}>
-                    <p>bla</p>
+                    <Board />
                 </BoardProvider>
             </div>
         </Fragment>
