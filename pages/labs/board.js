@@ -6,11 +6,7 @@ const BoardPage = () => {
     return (
         <Fragment>
             <h1>Trello Board</h1>
-            <div>
-                <BoardProvider value={boardState}>
-                    <Board />
-                </BoardProvider>
-            </div>
+            <Board />
         </Fragment>
     )
 };

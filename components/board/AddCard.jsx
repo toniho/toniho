@@ -1,5 +1,4 @@
-import { useState, useRef, useContext } from 'react';
-import BoardContext from '../../stores/BoardContext';
+import { useState, useRef } from 'react';
 
 export const AddCard = ({ onSubmit = () => {},  }) => {
     let [isOpen, setIsOpen] = useState(false);
@@ -9,14 +8,17 @@ export const AddCard = ({ onSubmit = () => {},  }) => {
         setIsOpen(!isOpen);
         setValue=('');
     };
+
     const handleSubmit = () => {
         const value = textAreaElement.current.value;
-        console.log(value);
         onSubmit(value);
         setIsOpen(false);
     }
     const handleValueChange = (event) => {
         setValue(event.target.value);
+    }
+    if (isOpen && textAreaElement) {
+        setTimeout(() => textAreaElement.current.focus());
     }
     const AddCardDetails = () => {
         return (
@@ -38,11 +40,13 @@ export const AddCard = ({ onSubmit = () => {},  }) => {
     
 };
 
-const ConnectedAddCard = ({ listId }) => {
-    const boardContext = useContext(BoardContext);
-    console.log(boardContext);
+const ConnectedAddCard = ({ listId, dispatch }) => {
     const handleSubmit = value => {
-        boardContext.addCard(listId, value);
+        console.warn('milo', value);
+        dispatch({
+            type: 'addCard',
+            card: { listId, title: value },
+        });
     }
     return <AddCard onSubmit={handleSubmit} />;
 };
